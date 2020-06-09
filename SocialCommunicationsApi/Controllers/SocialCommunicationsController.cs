@@ -1,0 +1,42 @@
+﻿namespace SocialCommunicationsApi.Controllers
+{
+    using Microsoft.AspNetCore.Mvc;
+    using SocialCommunicationModels.ChatInputAndOutputModels;
+    using SocialCommunicationModels.CommonModels;
+    using SocialCommunicationsBL.BusinessLogic.ChatRegistration;
+    using System;
+    using System.Threading.Tasks;
+
+    [ApiController]
+    [Route("SocialCommunication")]
+    public class SocialCommunicationsController : ControllerBase
+    {
+        [Route("ChatUserRegistration")]
+        [HttpPost]
+        public async Task<IActionResult> ChatUserRegistration_Main(InputModel InputModel)
+        {
+            OutputModel outputModel = null;
+            try
+            {
+                if (InputModel == null)
+                {
+                    outputModel = new OutputModel()
+                    {
+                        ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.NoContent,
+                    };
+                    return BadRequest(outputModel);
+                }
+
+                ChatUserRegistration chatUserRegistration = new ChatUserRegistration();
+
+                outputModel = await chatUserRegistration.UserRegistration(InputModel);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return Ok(outputModel);
+        }
+    }
+}
