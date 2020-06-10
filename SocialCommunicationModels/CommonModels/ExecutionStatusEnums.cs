@@ -23,6 +23,12 @@
             }
         }
 
+        public string ErrorMessage;
+
+        public string InnerException;
+
+        public string StackTrace;
+
         public string ExecutionStatusMessage(ExecutionStatus ExecutionEnum)
         {
             string ExecutionalMessage;

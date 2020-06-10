@@ -39,5 +39,14 @@ namespace SocialCommunicationModels.CommonUsage
 
             return await UserRegistrationTable.GetItemAsync(primaryKey);
         }
+
+        public async Task<Document> PutItemInTable(Document ItemRecord, string TableName)
+        {
+            AmazonDynamoDBClient awsDynamoDbInstance = AwsConnection();
+
+            Table UserRegistrationTable = Table.LoadTable(awsDynamoDbInstance, TableName);
+
+            return await UserRegistrationTable.PutItemAsync(ItemRecord);
+        }
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace SocialCommunicationModels.ChatRegisterModels
+﻿using System;
+
+namespace SocialCommunicationModels.ChatRegisterModels
 {
     public class ChatRegisterUserModel
     {
         public string UserName;
 
-        public int UserId;
+        public Int64 UserId;
     }
 }

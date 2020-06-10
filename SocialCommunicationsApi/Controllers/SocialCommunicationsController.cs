@@ -3,6 +3,7 @@
     using Microsoft.AspNetCore.Mvc;
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using SocialCommunicationModels.CommonModels;
+    using SocialCommunicationsBL.BusinessLogic;
     using SocialCommunicationsBL.BusinessLogic.ChatRegistration;
     using System;
     using System.Threading.Tasks;
@@ -24,16 +25,23 @@
                     {
                         ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.NoContent,
                     };
+
                     return BadRequest(outputModel);
                 }
 
-                ChatUserRegistration chatUserRegistration = new ChatUserRegistration();
+                ChatActionFlowBl chatActionFlowBl = new ChatActionFlowBl();
 
-                outputModel = await chatUserRegistration.UserRegistration(InputModel);
+                outputModel = await chatActionFlowBl.ChatApiActionFlow(InputModel);
             }
             catch (Exception ex)
             {
-                throw ex;
+                outputModel = new OutputModel()
+                {
+                    ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.ExecutionError,
+                    ErrorMessage = ex.Message,
+                    InnerException = ex.InnerException.Message,
+                    StackTrace = ex.StackTrace,
+                };
             }
 
             return Ok(outputModel);

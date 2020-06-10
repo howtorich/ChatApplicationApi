@@ -2,13 +2,14 @@
 {
     using SocialCommunicationModels.ChatModels;
     using SocialCommunicationModels.ChatRegisterModels;
+    using static SocialCommunicationModels.CommonModels.ChatApiActionEnums;
 
     public class InputModel
     {
-        public ChatInputModel ChatInputModel;
+        public ChatApiActions ApiAction;
+
+        //public ChatInputModel ChatInputModel;
 
         public ChatRegisterUserModel chatRegisterUserModel;
     }
-
-
 }
