@@ -14,5 +14,11 @@
     <ProjectReference Include="..\SocialCommunicationsBL\SocialCommunicationsBL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CommonLibary">
+      <HintPath>RefDlls\CommonLibary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
 </Project>

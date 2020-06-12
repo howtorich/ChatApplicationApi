@@ -8,4 +8,10 @@
     <ProjectReference Include="..\SocialCommunicationModels\SocialCommunicationModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CommonLibary">
+      <HintPath>..\SocialCommunicationsApi\RefDlls\CommonLibary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

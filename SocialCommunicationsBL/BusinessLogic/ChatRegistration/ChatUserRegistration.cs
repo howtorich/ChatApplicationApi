@@ -1,10 +1,10 @@
 ﻿namespace SocialCommunicationsBL.BusinessLogic.ChatRegistration
 {
     using Amazon.DynamoDBv2.DocumentModel;
+    using CommonLibary.CommonAwsDynamoDb;
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using SocialCommunicationModels.ChatRegisterModels;
     using SocialCommunicationModels.CommonModels;
-    using SocialCommunicationModels.CommonUsage;
     using System;
     using System.Threading.Tasks;
 
