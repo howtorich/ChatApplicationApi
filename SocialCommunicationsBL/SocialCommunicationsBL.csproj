@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SocialCommunicationDA\SocialCommunicationDA.csproj" />
     <ProjectReference Include="..\SocialCommunicationModels\SocialCommunicationModels.csproj" />
   </ItemGroup>
 

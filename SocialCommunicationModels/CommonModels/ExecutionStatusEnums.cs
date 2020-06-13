@@ -13,7 +13,7 @@
             Failed = 1004
         }
 
-        public ExecutionStatus ExecutionalStatus;
+        public ExecutionStatus ExecutionalStatus { private get; set; }
 
         public string ExecutionalStatusMessage
         {

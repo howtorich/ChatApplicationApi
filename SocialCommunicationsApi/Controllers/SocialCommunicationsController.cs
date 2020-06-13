@@ -4,7 +4,6 @@
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using SocialCommunicationModels.CommonModels;
     using SocialCommunicationsBL.BusinessLogic;
-    using SocialCommunicationsBL.BusinessLogic.ChatRegistration;
     using System;
     using System.Threading.Tasks;
 

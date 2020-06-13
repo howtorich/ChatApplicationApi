@@ -7,10 +7,15 @@
     using SocialCommunicationModels.CommonModels;
     using System;
     using System.Threading.Tasks;
+    using SocialCommunicationDA.SqlServerLogic.ChatDataLayer;
 
     public class ChatUserRegistration
     {
-        public async Task<OutputModel> UserRegistration(InputModel inputModel)
+        public ChatUserRegistration()
+        {
+
+        }
+        public async Task<OutputModel> UserRegistrationFromDynamoDb(InputModel inputModel)
         {
             OutputModel outputModel = null;
             Document RegisteredUser;
@@ -43,6 +48,21 @@
                 ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.Success,
             };
 
+
+            return outputModel;
+        }
+
+        public OutputModel UserRegistration(InputModel inputModel)
+        {
+            OutputModel outputModel;
+
+            ChatUserRegistrationDL chatUserRegistrationDL = new ChatUserRegistrationDL();
+
+            outputModel = chatUserRegistrationDL.UserRegistration(inputModel);
+
+            if (outputModel?.responseModel?.ExecutionStatus == 1) {
+                outputModel.ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.Success;
+            }
 
             return outputModel;
         }

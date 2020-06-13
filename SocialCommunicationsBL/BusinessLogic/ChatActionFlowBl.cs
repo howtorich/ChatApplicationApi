@@ -24,7 +24,7 @@
                 case ChatApiActionEnums.ChatApiActions.Registration:
                     ChatUserRegistration chatUserRegistration = new ChatUserRegistration();
 
-                    outputModel = await chatUserRegistration.UserRegistration(inputModel);
+                    outputModel = chatUserRegistration.UserRegistration(inputModel);
                     break;
                 case ChatApiActionEnums.ChatApiActions.GetUsersList:
                     break;
@@ -32,7 +32,7 @@
                     break;
             }
 
-            return outputModel;
+            return await Task.FromResult(outputModel);
         }
     }
 }
