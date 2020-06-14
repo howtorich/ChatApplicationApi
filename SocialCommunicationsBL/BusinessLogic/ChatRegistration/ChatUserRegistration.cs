@@ -63,6 +63,10 @@
             if (outputModel?.responseModel?.ExecutionStatus == 1) {
                 outputModel.ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.Success;
             }
+            else
+            {
+                outputModel.ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.Failed;
+            }
 
             return outputModel;
         }

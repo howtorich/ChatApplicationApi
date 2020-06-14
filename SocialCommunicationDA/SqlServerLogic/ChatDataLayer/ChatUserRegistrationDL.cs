@@ -1,9 +1,9 @@
 ﻿namespace SocialCommunicationDA.SqlServerLogic.ChatDataLayer
 {
     using CommonLibary.CommonDb;
+    using CommonLibary.CommonModels;
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using SocialCommunicationModels.ChatRegisterModels;
-    using SocialCommunicationModels.CommonModels;
     using System.Data;
     using System.Data.SqlClient;
 
@@ -16,24 +16,21 @@
             SqlCommand command = SqlServerCommon.GetSpCommandByConnectToDb(SqlServerCommon.SqlServerDBs.DbAdmin, "usp_ChatUserRegister_insert_Get");
 
             command.AddParameter("@UserName", SqlDbType.VarChar, inputModel.chatRegisterUserModel.UserName, 50);
-            
+
+            command.AddParameter("@UserID", SqlDbType.Int, null, ParameterDirection.Output);
+
             command.AddCommonInputParams();
 
-            using (IDataReader reader = command.ExecuteReader())
+            command.ExecuteNonQuery();
+
+            outputModel = new OutputModel();
+            outputModel.ChatRegisterUserOutput = new ChatRegisterUserModel()
             {
-                outputModel = new OutputModel();
+                UserId = command.GetOutputParam("@UserID", 0),
+                UserName = command.GetOutputParam("@UserName", string.Empty)
+            };
 
-                if (reader.Read())
-                {
-                    outputModel.ChatRegisterUserOutput = new ChatRegisterUserModel()
-                    {
-                        UserId = reader.GetDbInt32("UserId"),
-                        UserName = reader.GetDbStriing("UserName")
-                    };
-
-                    
-                }
-            }
+            outputModel.responseModel = new ResponseModel();
             command.GetCommonOutputParams(outputModel.responseModel);
 
             command.Connection.Close();

@@ -29,7 +29,7 @@
 
         public string StackTrace;
 
-        public string ExecutionStatusMessage(ExecutionStatus ExecutionEnum)
+        private string ExecutionStatusMessage(ExecutionStatus ExecutionEnum)
         {
             string ExecutionalMessage;
             switch (ExecutionEnum)
