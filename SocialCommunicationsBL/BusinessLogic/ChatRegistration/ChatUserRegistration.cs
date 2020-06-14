@@ -8,13 +8,11 @@
     using System;
     using System.Threading.Tasks;
     using SocialCommunicationDA.SqlServerLogic.ChatDataLayer;
+    using System.Text.RegularExpressions;
 
     public class ChatUserRegistration
     {
-        public ChatUserRegistration()
-        {
 
-        }
         public async Task<OutputModel> UserRegistrationFromDynamoDb(InputModel inputModel)
         {
             OutputModel outputModel = null;
@@ -56,11 +54,24 @@
         {
             OutputModel outputModel;
 
+            //ExecutionStatusEnums.ExecutionStatus validation;
+            //validation = UserNameValidation(inputModel?.chatRegisterUserModel?.UserName);
+
+
+            //if (validation != ExecutionStatusEnums.ExecutionStatus.ValidationSuccess)
+            //{
+            //    return outputModel = new OutputModel()
+            //    {
+            //        ExecutionalStatus = validation,
+            //    };
+            //}
+
             ChatUserRegistrationDL chatUserRegistrationDL = new ChatUserRegistrationDL();
 
             outputModel = chatUserRegistrationDL.UserRegistration(inputModel);
 
-            if (outputModel?.responseModel?.ExecutionStatus == 1) {
+            if (outputModel?.responseModel?.ExecutionStatus == 1)
+            {
                 outputModel.ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.Success;
             }
             else
@@ -69,6 +80,33 @@
             }
 
             return outputModel;
+        }
+
+        public ExecutionStatusEnums.ExecutionStatus UserNameValidation(string userName)
+        {
+            if (string.IsNullOrWhiteSpace(userName))
+            {
+                return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotExist;
+            }
+
+            if (Regex.IsMatch(userName, @"/^\S+$/"))
+            {
+                return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpaces;
+            }
+
+            if (Regex.IsMatch(userName, @"\|!#$%&/()=?»«@£§€{}.-;'<>_,"))
+            {
+                return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpecialSymbols;
+            }
+
+            // not allowd Spaces And symbols
+            //if (Regex.IsMatch(userName, @"/^\S+$/|[!@$#%^&*()]"))
+            //{
+            //    return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotExist;
+            //}
+
+            return ExecutionStatusEnums.ExecutionStatus.ValidationSuccess;
+
         }
     }
 }

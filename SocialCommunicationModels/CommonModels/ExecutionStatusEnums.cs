@@ -10,7 +10,22 @@
 
             Success = 1003,
 
-            Failed = 1004
+            Failed = 1004,
+
+            ValidationSuccess = 1005,
+
+            ValidationFailed = 1006,
+
+
+
+            UserNameDoesnotExist = 101,
+
+            UserNameDoesnotAllowSpaces = 102,
+
+            UserNameDoesnotAllowSpecialSymbols = 103,
+
+            
+
         }
 
         public ExecutionStatus ExecutionalStatus { private get; set; }
@@ -45,6 +60,23 @@
                     break;
                 case ExecutionStatus.Failed:
                     ExecutionalMessage = "Failed";
+                    break;
+                case ExecutionStatus.ValidationSuccess:
+                    ExecutionalMessage = "Validation Success";
+                    break;
+                case ExecutionStatus.ValidationFailed:
+                    ExecutionalMessage = "Validation Failed";
+                    break;
+
+
+                case ExecutionStatus.UserNameDoesnotExist:
+                    ExecutionalMessage = "Username does not exist.";
+                    break;
+                case ExecutionStatus.UserNameDoesnotAllowSpaces:
+                    ExecutionalMessage = "Username does not allow Spaces.";
+                    break;
+                case ExecutionStatus.UserNameDoesnotAllowSpecialSymbols:
+                    ExecutionalMessage = "Username does not allow Special Symbols.";
                     break;
                 default:
                     ExecutionalMessage = "--- Somting went worng! ---";
