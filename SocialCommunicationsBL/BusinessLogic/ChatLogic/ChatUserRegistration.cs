@@ -1,4 +1,4 @@
-﻿namespace SocialCommunicationsBL.BusinessLogic.ChatRegistration
+﻿namespace SocialCommunicationsBL.BusinessLogic.ChatLogic
 {
     using Amazon.DynamoDBv2.DocumentModel;
     using CommonLibary.CommonAwsDynamoDb;
@@ -7,8 +7,8 @@
     using SocialCommunicationModels.CommonModels;
     using System;
     using System.Threading.Tasks;
-    using SocialCommunicationDA.SqlServerLogic.ChatDataLayer;
     using System.Text.RegularExpressions;
+    using SocialCommunicationDA.SqlServerLogic.ChatLogic;
 
     public class ChatUserRegistration
     {

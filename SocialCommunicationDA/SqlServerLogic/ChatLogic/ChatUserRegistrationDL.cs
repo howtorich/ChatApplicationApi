@@ -1,4 +1,4 @@
-﻿namespace SocialCommunicationDA.SqlServerLogic.ChatDataLayer
+﻿namespace SocialCommunicationDA.SqlServerLogic.ChatLogic
 {
     using CommonLibary.CommonDb;
     using CommonLibary.CommonModels;

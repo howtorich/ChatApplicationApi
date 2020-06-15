@@ -28,7 +28,7 @@
 
         }
 
-        public ExecutionStatus ExecutionalStatus { private get; set; }
+        public ExecutionStatus ExecutionalStatus { get; set; }
 
         public string ExecutionalStatusMessage
         {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SocialCommunicationModels.CommonModels
+﻿namespace SocialCommunicationModels.CommonModels
 {
     public class ChatApiActionEnums
     {
@@ -10,7 +6,9 @@ namespace SocialCommunicationModels.CommonModels
         {
             Registration = 100,
 
-            GetUsersList = 101,
+            GetChatUsersList = 101,
+
+            GetUserFriendsList = 102,
         }
     }
 }
