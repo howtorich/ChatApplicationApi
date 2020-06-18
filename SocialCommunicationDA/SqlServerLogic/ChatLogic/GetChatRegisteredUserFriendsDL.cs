@@ -24,7 +24,7 @@
             using (IDataReader reader = command.ExecuteReader())
             {
                 outputModel = new OutputModel();
-                outputModel.ChatRegisteredUserFriends = new List<ChatRegisterUserModel>();
+                outputModel.Friends = new List<ChatRegisterUserModel>();
 
                 while (reader.Read())
                 {
@@ -33,11 +33,11 @@
                         UserName = reader.GetDbStriing("UserName"),
                         UserId = reader.GetDbInt32("UserId"),
                     };
-                    outputModel.ChatRegisteredUserFriends.Add(ChatUser);
+                    outputModel.Friends.Add(ChatUser);
                 }
             }
 
-            if (outputModel.ChatRegisteredUserFriends.Count == 0)
+            if (outputModel.Friends.Count == 0)
             {
                 outputModel.responseModel = new ResponseModel();
                 command.GetCommonOutputParams(outputModel.responseModel);

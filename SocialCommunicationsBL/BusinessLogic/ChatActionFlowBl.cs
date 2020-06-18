@@ -47,6 +47,16 @@
                     outputModel = getChatRegisteredUserFriends.ChatRegisteredUserFriends(inputModel);
 
                     break;
+
+                case ChatApiActionEnums.ChatApiActions.GetUsersWithoutFriends:
+                    // Test Input Json  : {"ApiAction":102,"chatRegisterUserModel":{"UserId":1}}
+                    // Test Output Json : {"chatRegisterUserOutput":null,"chatRegisteredUsers":null,"chatRegisteredUserFriends":[{"userName":"Satya","userId":3},{"userName":"Vijay","userId":4}],"responseModel":null,"errorMessage":null,"innerException":null,"stackTrace":null,"executionalStatus":1003,"executionalStatusMessage":"Success"}
+
+                    GetChatUsersWithoutFriends getChatUsersWithoutFriends = new GetChatUsersWithoutFriends();
+
+                    outputModel = getChatUsersWithoutFriends.ChatUsersWithoutFriendsGet(inputModel);
+
+                    break;
                 default:
                     break;
             }

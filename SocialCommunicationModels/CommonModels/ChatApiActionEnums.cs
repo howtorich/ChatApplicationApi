@@ -9,6 +9,8 @@
             GetChatUsersList = 101,
 
             GetUserFriendsList = 102,
+
+            GetUsersWithoutFriends = 103,
         }
     }
 }

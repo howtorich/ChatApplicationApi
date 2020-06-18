@@ -54,17 +54,17 @@
         {
             OutputModel outputModel;
 
-            //ExecutionStatusEnums.ExecutionStatus validation;
-            //validation = UserNameValidation(inputModel?.chatRegisterUserModel?.UserName);
+            ExecutionStatusEnums.ExecutionStatus validation;
+            validation = UserNameValidation(inputModel?.chatRegisterUserModel?.UserName);
 
 
-            //if (validation != ExecutionStatusEnums.ExecutionStatus.ValidationSuccess)
-            //{
-            //    return outputModel = new OutputModel()
-            //    {
-            //        ExecutionalStatus = validation,
-            //    };
-            //}
+            if (validation != ExecutionStatusEnums.ExecutionStatus.ValidationSuccess)
+            {
+                return new OutputModel()
+                {
+                    ExecutionalStatus = validation,
+                };
+            }
 
             ChatUserRegistrationDL chatUserRegistrationDL = new ChatUserRegistrationDL();
 
@@ -89,16 +89,16 @@
                 return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotExist;
             }
 
-            if (Regex.IsMatch(userName, @"/^\S+$/"))
-            {
-                return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpaces;
-            }
+            //if (Regex.IsMatch(userName, @"/^\S+$/"))
+            //{
+            //    return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpaces;
+            //}
 
-            if (Regex.IsMatch(userName, @"\|!#$%&/()=?»«@£§€{}.-;'<>_,"))
-            {
-                return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpecialSymbols;
-            }
-
+            //if (Regex.IsMatch(userName, @"\|!#$%&/()=?»«@£§€{}.-;'<>_,"))
+            //{
+            //    return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpecialSymbols;
+            //}
+            //
             // not allowd Spaces And symbols
             //if (Regex.IsMatch(userName, @"/^\S+$/|[!@$#%^&*()]"))
             //{

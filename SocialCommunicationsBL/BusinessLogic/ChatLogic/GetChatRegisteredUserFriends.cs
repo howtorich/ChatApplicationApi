@@ -14,7 +14,7 @@
 
             outputModel = getChatRegisteredUserFriendsDL.ChatRegisteredUserFriends(inputModel);
 
-            if (outputModel?.ChatRegisteredUserFriends.Count > 0 || outputModel?.responseModel?.ExecutionStatus == 1)
+            if (outputModel?.Friends.Count > 0 || outputModel?.responseModel?.ExecutionStatus == 1)
             {
                 outputModel.ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.Success;
             }
