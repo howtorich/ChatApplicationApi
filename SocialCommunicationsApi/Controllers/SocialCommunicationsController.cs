@@ -3,12 +3,14 @@
     using Microsoft.AspNetCore.Mvc;
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using SocialCommunicationModels.CommonModels;
+    using SocialCommunicationsApi.Validation;
     using SocialCommunicationsBL.BusinessLogic;
     using System;
     using System.Threading.Tasks;
 
     [ApiController]
     [Route("SocialCommunication")]
+    [ApiKeyAuth]
     public class SocialCommunicationsController : ControllerBase
     {
         [Route("ChatUserRegistration")]

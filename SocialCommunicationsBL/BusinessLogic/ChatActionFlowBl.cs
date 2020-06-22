@@ -29,7 +29,7 @@
                     outputModel = chatUserRegistration.UserRegistration(inputModel);
 
                     break;
-                case ChatApiActionEnums.ChatApiActions.GetChatUsersList:
+                case ChatApiActionEnums.ChatApiActions.GetGolbalChatUsersList:
                     // Test Input Json  : {"ApiAction":101,"chatRegisterUserModel":{}}
                     // Test Output Json : {"chatRegisterUserOutput":null,"chatRegisteredUsers":[{"userName":"pavanSomineni","userId":1},{"userName":"Satya","userId":3},{"userName":"Vijay","userId":4},{"userName":"PDV Sai Krish","userId":5},{"userName":"Pdvs","userId":6},{"userName":"Pdvs Krishna","userId":7},{"userName":"pavan Krishna","userId":8},{"userName":"sassss","userId":9},{"userName":"pavanKrishna","userId":10},{"userName":"pavanKrishna2","userId":11},{"userName":"pavanKrishna3","userId":12},{"userName":"pavanKrishna4","userId":16},{"userName":"pavansomineni9","userId":17},{"userName":"pavanKrishna11","userId":20},{"userName":"pavansomineni19","userId":21},{"userName":"pavansomineni99","userId":22},{"userName":"pavan@somineni99","userId":23}],"chatRegisteredUserFriends":null,"responseModel":null,"errorMessage":null,"innerException":null,"stackTrace":null,"executionalStatus":1003,"executionalStatusMessage":"Success"}
 

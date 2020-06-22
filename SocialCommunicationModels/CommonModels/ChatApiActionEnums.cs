@@ -6,7 +6,7 @@
         {
             Registration = 100,
 
-            GetChatUsersList = 101,
+            GetGolbalChatUsersList = 101,
 
             GetUserFriendsList = 102,
 
