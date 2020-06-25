@@ -16,6 +16,12 @@
 
             ValidationFailed = 1006,
 
+            NoSuchAction = 1007,
+
+            ActionTypeRequired = 1008,
+
+            UnAuthorized = 1009,
+
 
 
             UserNameDoesnotExist = 101,
@@ -67,6 +73,17 @@
                 case ExecutionStatus.ValidationFailed:
                     ExecutionalMessage = "Validation Failed";
                     break;
+                case ExecutionStatus.NoSuchAction:
+                    ExecutionalMessage = "No Such Action type!...";
+                    break;
+                case ExecutionStatus.ActionTypeRequired:
+                    ExecutionalMessage = "Action type Required...";
+                    break;
+                case ExecutionStatus.UnAuthorized:
+                    ExecutionalMessage = "UnAuthorized! Access denied...";
+                    break;
+
+
 
 
                 case ExecutionStatus.UserNameDoesnotExist:

@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Threading.Tasks;
-
-namespace SocialCommunicationsApi.Validation
+﻿namespace SocialCommunicationsApi.Validation
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Filters;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using SocialCommunicationModels.ChatInputAndOutputModels;
+    using System;
+    using System.Threading.Tasks;
+
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class ApiKeyAuth : Attribute, IAsyncActionFilter
     {
@@ -14,7 +15,10 @@ namespace SocialCommunicationsApi.Validation
         {
             if (!context.HttpContext.Request.Headers.TryGetValue("ApiKeyHeader", out var ApikeyHeaderValue))
             {
-                context.Result = new UnauthorizedResult();
+                context.Result = new UnauthorizedObjectResult(new OutputModel()
+                {
+                    ExecutionalStatus = SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UnAuthorized
+                });
                 return;
             }
 
@@ -25,7 +29,10 @@ namespace SocialCommunicationsApi.Validation
 
             if (!ApikeyValue.Equals(ApikeyHeaderValue))
             {
-                context.Result = new UnauthorizedResult();
+                context.Result = new UnauthorizedObjectResult(new OutputModel()
+                {
+                    ExecutionalStatus = SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UnAuthorized
+                });
                 return;
             }
 

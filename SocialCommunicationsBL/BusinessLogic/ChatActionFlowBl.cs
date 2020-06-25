@@ -9,13 +9,13 @@
     {
         public async Task<OutputModel> ChatApiActionFlow(InputModel inputModel)
         {
-            OutputModel outputModel = null;
+            OutputModel outputModel;
 
             if (inputModel?.ApiAction == null)
             {
-                outputModel = new OutputModel()
+                return new OutputModel()
                 {
-                    ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.NoContent,
+                    ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.ActionTypeRequired,
                 };
             }
 
@@ -58,8 +58,13 @@
 
                     break;
                 default:
+                    outputModel = new OutputModel()
+                    {
+                        ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.NoSuchAction,
+                    };
                     break;
             }
+
 
             return await Task.FromResult(outputModel);
         }
