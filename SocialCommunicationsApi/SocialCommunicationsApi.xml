@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocialCommunicationsApi</name>
+    </assembly>
+    <members>
+        <member name="M:SocialCommunicationsApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             This method gets called by the runtime. Use this method to add services to the container.
+            For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940.
+            </summary>
+            <param name="services">services.</param>
+        </member>
+        <member name="M:SocialCommunicationsApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Add Controllers.
+            </summary>
+            <param name="app"> Applications.</param>
+            <param name="env"> Enviroments.</param>
+        </member>
+    </members>
+</doc>

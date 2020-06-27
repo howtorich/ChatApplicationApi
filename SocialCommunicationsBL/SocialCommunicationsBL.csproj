@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\V4Tasks\ChatCallsVideos_Api_GitHub\SocialCommunicationsBL\SocialCommunicationsBL.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\SocialCommunicationDA\SocialCommunicationDA.csproj" />
     <ProjectReference Include="..\SocialCommunicationModels\SocialCommunicationModels.csproj" />

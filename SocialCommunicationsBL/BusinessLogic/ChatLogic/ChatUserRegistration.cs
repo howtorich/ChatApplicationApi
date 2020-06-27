@@ -12,7 +12,6 @@
 
     public class ChatUserRegistration
     {
-
         public async Task<OutputModel> UserRegistrationFromDynamoDb(InputModel inputModel)
         {
             OutputModel outputModel = null;
