@@ -16,6 +16,8 @@
 
             command.AddParameter("@UserID", SqlDbType.Int, inputModel.addFriend.UserId.ToString());
 
+            command.AddParameter("@AddingUserId", SqlDbType.Int, inputModel.addFriend.AddingFriendUserId.ToString());
+
             command.AddParameter("@Exists", SqlDbType.Bit, false.ToString(), ParameterDirection.Output);
 
             command.AddCommonInputParams();
