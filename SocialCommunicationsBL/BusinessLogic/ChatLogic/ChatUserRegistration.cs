@@ -85,7 +85,7 @@
         {
             if (string.IsNullOrWhiteSpace(userName))
             {
-                return ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotExist;
+                return ExecutionStatusEnums.ExecutionStatus.UserDoesnotExist;
             }
 
             //if (Regex.IsMatch(userName, @"/^\S+$/"))

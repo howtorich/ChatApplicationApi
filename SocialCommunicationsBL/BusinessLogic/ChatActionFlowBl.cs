@@ -57,6 +57,17 @@
                     outputModel = getChatUsersWithoutFriends.ChatUsersWithoutFriendsGet(inputModel);
 
                     break;
+
+                case ChatApiActionEnums.ChatApiActions.AddFriend:
+                    // Test Input Json  : {"ApiAction":104,"addFriend":{"UserId":70,"AddingFriendUserId":23}}
+                    // Test Output Json : {"responseModel":{"executionStatus":1,"errorStatus":0,"errorMessage":""},"errorMessage":null,"innerException":null,"stackTrace":null,"executionalStatus":1003,"executionalStatusMessage":"Success"}
+
+                    AddFriend addFriend = new AddFriend();
+
+                    outputModel = addFriend.FriendAdding(inputModel);
+
+                    break;
+
                 default:
                     outputModel = new OutputModel()
                     {

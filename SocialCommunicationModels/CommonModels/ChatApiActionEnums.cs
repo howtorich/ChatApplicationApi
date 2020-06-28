@@ -11,6 +11,8 @@
             GetUserFriendsList = 102,
 
             GetUsersWithoutFriends = 103,
+
+            AddFriend = 104,
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SocialCommunicationModels.ChatInputAndOutputModels
 {
-    using SocialCommunicationModels.ChatModels;
+    using SocialCommunicationModels.ChatModels.ChatFriendAddingModels;
     using SocialCommunicationModels.ChatRegisterModels;
     using static SocialCommunicationModels.CommonModels.ChatApiActionEnums;
 
@@ -11,5 +11,7 @@
         //public ChatInputModel ChatInputModel;
 
         public ChatRegisterUserModel chatRegisterUserModel;
+
+        public AddFriend addFriend;
     }
 }

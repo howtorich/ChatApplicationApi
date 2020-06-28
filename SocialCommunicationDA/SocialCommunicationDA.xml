@@ -4,5 +4,13 @@
         <name>SocialCommunicationDA</name>
     </assembly>
     <members>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.AddFriendDL.AddFriend(SocialCommunicationModels.ChatInputAndOutputModels.InputModel,System.Boolean)">
+            <summary>
+            Add Friend Using with update or insert flag.
+            </summary>
+            <param name="inputModel"></param>
+            <param name="InsertOrUpdate">true--> update     |    false--> Insert</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -39,9 +39,9 @@
                 outputModel = new OutputModel()
                 {
                     ExecutionalStatus = ExecutionStatusEnums.ExecutionStatus.ExecutionError,
-                    ErrorMessage = ex.Message,
-                    InnerException = ex.InnerException.Message,
-                    StackTrace = ex.StackTrace,
+                    ErrorMessage = ex?.Message,
+                    InnerException = ex?.InnerException?.Message,
+                    StackTrace = ex?.StackTrace,
                 };
             }
 
