@@ -81,6 +81,16 @@
 
                     break;
 
+                case ChatApiActionEnums.ChatApiActions.GetUserApplicationDetails:
+                    // Test Input Json  : {"ApiAction":105,"chatRegisterUserModel":{"UserId":1}}
+                    // Test Output Json : {"userApplicationDetailsModel":{"userName":"pavanSomineni","online":false,"recentChatUsers":null},"responseModel":{"executionStatus":1,"errorStatus":0,"errorMessage":""},"errorMessage":null,"innerException":null,"stackTrace":null,"executionalStatus":1003,"executionalStatusMessage":"Success"}
+
+                    var getChatUserApplicationDetails = new GetChatUserApplicationDetails();
+
+                    outputModel = getChatUserApplicationDetails.GetChatUserAppDetails(inputModel);
+
+                    break;
+
                 default:
                     outputModel = new OutputModel()
                     {

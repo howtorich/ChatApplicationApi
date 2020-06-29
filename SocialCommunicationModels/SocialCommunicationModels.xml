@@ -50,6 +50,12 @@
             </summary>
             <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
         </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.userApplicationDetailsModel">
+            <summary>
+            Chat User Application Details Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel"/>
+        </member>
         <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel">
             <summary>
             Chat Response Model.
@@ -75,6 +81,27 @@
             <summary>
             Already Exists Users Frineds Data (PROPERTIE HAS AN INTERNAL USE).
             </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel">
+            <summary>
+            User Application Model.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel.UserName">
+            <summary>
+            User Name.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel.Online">
+            <summary>
+            User Online --> False(Ofline) --> True(Online).
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel.RecentChatUsers">
+            <summary>
+            User Recent Chat List.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
         </member>
         <member name="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel">
             <summary>
@@ -124,6 +151,11 @@
         <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.AddFriend">
             <summary>
             Add Friend to user Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetUserApplicationDetails">
+            <summary>
+            Get user Application Details Api Action Type.
             </summary>
         </member>
         <member name="T:SocialCommunicationModels.CommonModels.ExecutionStatusEnums">

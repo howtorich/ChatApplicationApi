@@ -45,8 +45,8 @@ namespace SocialCommunicationDA.SqlServerLogic.ChatLogic
                 {
                     ChatUser = new ChatRegisterUserModel()
                     {
-                        UserName = reader.GetDbValue("UserName",string.Empty),
-                        UserId = reader.GetDbValue("UserId",-1),
+                        UserName = reader.GetDbColValue("UserName",string.Empty),
+                        UserId = reader.GetDbColValue("UserId",-1),
                     };
                     outputModel.ChatRegisteredUsers.Add(ChatUser);
                 }

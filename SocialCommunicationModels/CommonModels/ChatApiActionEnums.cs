@@ -34,6 +34,11 @@
             /// Add Friend to user Action Type.
             /// </summary>
             AddFriend = 104,
+
+            /// <summary>
+            /// Get user Application Details Api Action Type.
+            /// </summary>
+            GetUserApplicationDetails = 105,
         }
     }
 }

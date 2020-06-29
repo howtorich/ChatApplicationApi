@@ -27,13 +27,13 @@
             OutputModel outputModel;
             ChatRegisterUserModel Frined;
 
-            SqlCommand commad = SqlServerCommon.GetSpCommandByConnectToDb(SqlServerCommon.SqlServerDBs.DbAdmin, "usp_ChatRegisterUsersWithoutFriends_Get");
+            SqlCommand command = SqlServerCommon.GetSpCommandByConnectToDb(SqlServerCommon.SqlServerDBs.DbAdmin, "usp_ChatRegisterUsersWithoutFriends_Get");
 
-            commad.AddParameter("@UserID", System.Data.SqlDbType.Int, inputModel.chatRegisterUserModel.UserId.ToString());
+            command.AddParameter("@UserID", System.Data.SqlDbType.Int, inputModel.chatRegisterUserModel.UserId.ToString());
 
-            commad.AddCommonInputParams();
+            command.AddCommonInputParams();
 
-            using (IDataReader reader = commad.ExecuteReader())
+            using (IDataReader reader = command.ExecuteReader())
             {
                 outputModel = new OutputModel();
                 outputModel.Friends = new List<ChatRegisterUserModel>();
@@ -45,8 +45,8 @@
                 {
                     Frined = new ChatRegisterUserModel();
 
-                    Frined.UserId = reader.GetDbValue("UserId", 0);
-                    Frined.UserName = reader.GetDbValue("UserName", string.Empty);
+                    Frined.UserId = reader.GetDbColValue("UserId", 0);
+                    Frined.UserName = reader.GetDbColValue("UserName", string.Empty);
 
                     outputModel.Friends.Add(Frined);
                 }
@@ -55,10 +55,10 @@
             if (outputModel?.Friends?.Count == 0)
             {
                 outputModel.responseModel = new ResponseModel();
-                commad.GetCommonOutputParams(outputModel.responseModel);
+                command.GetCommonOutputParams(outputModel.responseModel);
             }
 
-            commad.ConnectionDispose();
+            command.ConnectionDispose();
 
             return outputModel;
 
