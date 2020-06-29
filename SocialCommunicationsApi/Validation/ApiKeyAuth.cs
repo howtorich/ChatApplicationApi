@@ -8,9 +8,19 @@
     using System;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Api Key Auth Validation Middleware.
+    /// </summary>
+    /// <seealso cref="OutputModel"/>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class ApiKeyAuth : Attribute, IAsyncActionFilter
     {
+        /// <summary>
+        /// On Action Excution to Api Request. Validate the Headers ApiKeyHeader.
+        /// </summary>
+        /// <param name="context" cref="ActionExecutingContext">Action Excution Context.</param>
+        /// <param name="next" cref="ActionExecutionDelegate">Action Excution Delegte.</param>
+        /// <returns cref="OutputModel">Chat Common Output Model.</returns>
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             if (!context.HttpContext.Request.Headers.TryGetValue("ApiKeyHeader", out var ApikeyHeaderValue))

@@ -4,13 +4,113 @@
         <name>SocialCommunicationDA</name>
     </assembly>
     <members>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.AddFriendDL">
+            <summary>
+            Add Frineds to Chat User.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
+        </member>
         <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.AddFriendDL.AddFriend(SocialCommunicationModels.ChatInputAndOutputModels.InputModel,System.Boolean)">
             <summary>
             Add Friend Using with update or insert flag.
             </summary>
-            <param name="inputModel"></param>
-            <param name="InsertOrUpdate">true--> update     |    false--> Insert</param>
-            <returns></returns>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend">Chat Common Input Model.</param>
+            <param name="InsertOrUpdate">true--> update     |    false--> Insert.   This Can Simplify the Update the frineds list in Db table OR Insert the Initial Frined to Db table.</param>
+            <returns cref="T:CommonLibary.CommonModels.ResponseModel">Common Response Model.</returns>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.ChatUserRegistrationDL">
+            <summary>
+            Chat User Registration DLL.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.ChatUserRegistrationDL.UserRegistration(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Chat User Registration Member with Db(Data Base) Call.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput">Chat Common Output Model. With User Id and User Name.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatRegisteredUserFriendsDL">
+            <summary>
+            Get Char Registered User Friends List DLL.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatRegisteredUserFriendsDL.ChatRegisteredUserFriends(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Chat Registratered User Friends List Get DLL Member.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends"/>
+            <remarks>End Point Sample Json: </remarks>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatRegisteredUsersDL">
+            <summary>
+            Get Chat Registered Users List (Global Chat users list) DLL.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatRegisteredUsersDL.ChatRegisteredUsersGet(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get Chat Registered User List Golbal Chat Users List DLL.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatUsersWithoutFriendsDL">
+            <summary>
+            Get Chat Users Without Frineds of Particular User DLL.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatUsersWithoutFriendsDL.ChatUsersWithoutFriendsGet(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Chat User Without Friends of Particular User DLL Member.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetUserFriendsColunmDataDL">
+            <summary>
+            Get User Friends Column Data. DLL
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
+            <seealso cref="T:CommonLibary.CommonModels.ResponseModel"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetUserFriendsColunmDataDL.GetUserFriendsColunmData(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get users Friends Colunm Data. DLL Memnber.
+            </summary>
+            <param name="inputModel" cref="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel">Chat Common input Model.</param>
+            <returns cref="T:CommonLibary.CommonModels.ResponseModel">Common Response Model.</returns>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.UserExistsOrNotInFrndsTableDL">
+            <summary>
+            User Existe or not in Chat table in Db. DLL Class.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend"/>
+            <seealso cref="T:CommonLibary.CommonModels.ResponseModel"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.UserExistsOrNotInFrndsTableDL.UserExistsOrNotInFrndsTable(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            User Exists in Chat Table or no. DLL Member.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend">Chat Common Input Model.</param>
+            <returns cref="T:CommonLibary.CommonModels.ResponseModel">Common Response Model.</returns>
         </member>
     </members>
 </doc>

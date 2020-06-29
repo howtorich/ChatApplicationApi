@@ -8,8 +8,20 @@
     using System.Data;
     using System.Data.SqlClient;
 
+    /// <summary>
+    /// Get Chat Users Without Frineds of Particular User DLL.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
     public class GetChatUsersWithoutFriendsDL
     {
+        /// <summary>
+        /// Chat User Without Friends of Particular User DLL Member.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common Output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
         public OutputModel ChatUsersWithoutFriendsGet(InputModel inputModel)
         {
             OutputModel outputModel;

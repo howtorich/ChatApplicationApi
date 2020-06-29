@@ -7,8 +7,21 @@
     using System.Data;
     using System.Data.SqlClient;
 
+    /// <summary>
+    /// Chat User Registration DLL.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
     public class ChatUserRegistrationDL
     {
+
+        /// <summary>
+        /// Chat User Registration Member with Db(Data Base) Call.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput">Chat Common Output Model. With User Id and User Name.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
         public OutputModel UserRegistration(InputModel inputModel)
         {
             OutputModel outputModel = null;

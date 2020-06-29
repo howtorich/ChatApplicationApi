@@ -5,8 +5,21 @@
     using SocialCommunicationsBL.BusinessLogic.ChatLogic;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Can Handle the Action Flow from the request input model ApiAction.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.ApiAction"/>
     public class ChatActionFlowBl
     {
+        /// <summary>
+        /// Handle the Action Based on the input Model Api Action type.
+        /// Conrtoll Flow can divert based on respective Api Action.
+        /// </summary>
+        /// <param name="inputModel">Chat Common Input Model.</param>
+        /// <returns>Chat Common Ouput Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.ApiAction"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
         public async Task<OutputModel> ChatApiActionFlow(InputModel inputModel)
         {
             OutputModel outputModel;
@@ -75,7 +88,6 @@
                     };
                     break;
             }
-
 
             return await Task.FromResult(outputModel);
         }

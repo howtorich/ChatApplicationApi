@@ -6,8 +6,18 @@
     using System.Data;
     using System.Data.SqlClient;
 
+    /// <summary>
+    /// Get User Friends Column Data. DLL
+    /// </summary>
+    /// <seealso cref="InputModel"/>
+    /// <seealso cref="ResponseModel"/>
     public class GetUserFriendsColunmDataDL
     {
+        /// <summary>
+        /// Get users Friends Colunm Data. DLL Memnber.
+        /// </summary>
+        /// <param name="inputModel" cref="InputModel">Chat Common input Model.</param>
+        /// <returns cref="ResponseModel">Common Response Model.</returns>
         public ResponseModel GetUserFriendsColunmData(InputModel inputModel)
         {
             ResponseModel response;

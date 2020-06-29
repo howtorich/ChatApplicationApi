@@ -2,16 +2,31 @@
 {
     using SocialCommunicationModels.ChatModels.ChatFriendAddingModels;
     using SocialCommunicationModels.ChatRegisterModels;
-    using static SocialCommunicationModels.CommonModels.ChatApiActionEnums;
+    using SocialCommunicationModels.CommonModels;
 
+    /// <summary>
+    /// Chat Commmon Input Model.
+    /// </summary>
     public class InputModel
     {
-        public ChatApiActions ApiAction;
+        /// <summary>
+        /// Api Action Type --> Based on this API End point Action May Differ.
+        /// </summary>
+        /// <seealso cref="ChatApiActionEnums.ChatApiActions"/>
+        public ChatApiActionEnums.ChatApiActions ApiAction;
 
         //public ChatInputModel ChatInputModel;
 
+        /// <summary>
+        /// Char Register User Model.
+        /// </summary>
+        /// <seealso cref="ChatRegisterUserModel"/>
         public ChatRegisterUserModel chatRegisterUserModel;
 
+        /// <summary>
+        /// Add friend to User Model.
+        /// </summary>
+        /// <seealso cref="AddFriend"/>
         public AddFriend addFriend;
     }
 }

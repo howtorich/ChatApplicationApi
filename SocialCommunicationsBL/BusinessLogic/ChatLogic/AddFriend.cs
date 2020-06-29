@@ -7,11 +7,22 @@
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// Add friend to Chat user.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
+    /// <seealso cref="SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionalStatusMessage"/>
     internal class AddFriend
     {
+        /// <summary>
+        /// Adding friend to User.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend">Chat Common Input Model.</param>
+        /// <returns cref="SocialCommunicationModels.CommonModels.ExecutionStatusEnums">Chat Common Output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
         internal OutputModel FriendAdding(InputModel inputModel)
         {
-            OutputModel outputModel;
             ResponseModel addfriendResponse;
 
             Validation(inputModel, out ExecutionStatusEnums.ExecutionStatus status);
@@ -99,8 +110,7 @@
             };
         }
 
-
-        public void Validation(InputModel inputModel, out ExecutionStatusEnums.ExecutionStatus status)
+        private void Validation(InputModel inputModel, out ExecutionStatusEnums.ExecutionStatus status)
         {
             if (inputModel?.addFriend.UserId == 0)
             {

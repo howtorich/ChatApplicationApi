@@ -7,12 +7,16 @@
     using SocialCommunicationModels.CommonModels;
     using System;
     using System.Threading.Tasks;
-    using System.Text.RegularExpressions;
     using SocialCommunicationDA.SqlServerLogic.ChatLogic;
 
-    public class ChatUserRegistration
+    /// <summary>
+    /// Chat User Registration Class.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
+    internal class ChatUserRegistration
     {
-        public async Task<OutputModel> UserRegistrationFromDynamoDb(InputModel inputModel)
+        internal async Task<OutputModel> UserRegistrationFromDynamoDb(InputModel inputModel)
         {
             OutputModel outputModel = null;
             Document RegisteredUser;
@@ -49,7 +53,15 @@
             return outputModel;
         }
 
-        public OutputModel UserRegistration(InputModel inputModel)
+        /// <summary>
+        /// Chat User Registration Action BLL Member. User Registration to Chat.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model --> With Respective child Model of "ChatRegisterUserModel".</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput">Chat Common Output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        internal OutputModel UserRegistration(InputModel inputModel)
         {
             OutputModel outputModel;
 
@@ -81,7 +93,7 @@
             return outputModel;
         }
 
-        public ExecutionStatusEnums.ExecutionStatus UserNameValidation(string userName)
+        private ExecutionStatusEnums.ExecutionStatus UserNameValidation(string userName)
         {
             if (string.IsNullOrWhiteSpace(userName))
             {
@@ -105,7 +117,6 @@
             //}
 
             return ExecutionStatusEnums.ExecutionStatus.ValidationSuccess;
-
         }
     }
 }

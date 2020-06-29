@@ -4,9 +4,21 @@ using SocialCommunicationModels.CommonModels;
 
 namespace SocialCommunicationsBL.BusinessLogic.ChatLogic
 {
-    public class GetChatRegisteredUsers
+    /// <summary>
+    /// Get Chat Registered Users List (Global Chat users list).
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+    internal class GetChatRegisteredUsers
     {
-        public OutputModel ChatRegisteredUsersGet(InputModel inputModel)
+        /// <summary>
+        /// Get Chat Registered User List Golbal Chat Users List.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        internal OutputModel ChatRegisteredUsersGet(InputModel inputModel)
         {
             OutputModel outputModel;
 

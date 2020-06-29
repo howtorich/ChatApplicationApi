@@ -7,14 +7,19 @@
     using System.Data;
     using System.Data.SqlClient;
 
+    /// <summary>
+    /// Add Frineds to Chat User.
+    /// </summary>
+    /// <seealso cref="InputModel.addFriend"/>
+    /// <seealso cref="OutputModel.responseModel"/>
     public class AddFriendDL
     {
         /// <summary>
         /// Add Friend Using with update or insert flag.
         /// </summary>
-        /// <param name="inputModel"></param>
-        /// <param name="InsertOrUpdate">true--> update     |    false--> Insert</param>
-        /// <returns></returns>
+        /// <param name="inputModel" cref="InputModel.addFriend">Chat Common Input Model.</param>
+        /// <param name="InsertOrUpdate">true--> update     |    false--> Insert.   This Can Simplify the Update the frineds list in Db table OR Insert the Initial Frined to Db table.</param>
+        /// <returns cref="ResponseModel">Common Response Model.</returns>
         public ResponseModel AddFriend(InputModel inputModel,bool InsertOrUpdate)
         {
             ResponseModel response;

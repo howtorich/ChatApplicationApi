@@ -6,8 +6,18 @@
     using System.Data;
     using System.Data.SqlClient;
 
+    /// <summary>
+    /// User Existe or not in Chat table in Db. DLL Class.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend"/>
+    /// <seealso cref="CommonLibary.CommonModels.ResponseModel"/>
     public class UserExistsOrNotInFrndsTableDL
     {
+        /// <summary>
+        /// User Exists in Chat Table or no. DLL Member.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend">Chat Common Input Model.</param>
+        /// <returns cref="CommonLibary.CommonModels.ResponseModel">Common Response Model.</returns>
         public ResponseModel UserExistsOrNotInFrndsTable(InputModel inputModel)
         {
             ResponseModel responseModel;

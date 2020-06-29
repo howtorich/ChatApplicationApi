@@ -8,8 +8,20 @@ using System.Data.SqlClient;
 
 namespace SocialCommunicationDA.SqlServerLogic.ChatLogic
 {
+    /// <summary>
+    /// Get Chat Registered Users List (Global Chat users list) DLL.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
     public class GetChatRegisteredUsersDL
     {
+        /// <summary>
+        /// Get Chat Registered User List Golbal Chat Users List DLL.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
         public OutputModel ChatRegisteredUsersGet(InputModel inputModel)
         {
             OutputModel outputModel = null;

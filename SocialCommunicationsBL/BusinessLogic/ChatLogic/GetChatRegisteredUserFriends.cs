@@ -4,9 +4,22 @@
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using SocialCommunicationModels.CommonModels;
 
-    public class GetChatRegisteredUserFriends
+    /// <summary>
+    /// Get Char Registered User Friends List.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends"/>
+    internal class GetChatRegisteredUserFriends
     {
-        public OutputModel ChatRegisteredUserFriends(InputModel inputModel)
+        /// <summary>
+        /// Chat Registratered User Friends List Get.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends">Chat Common Output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends"/>
+        /// <remarks>End Point Sample Json: </remarks>
+        internal OutputModel ChatRegisteredUserFriends(InputModel inputModel)
         {
             OutputModel outputModel;
 

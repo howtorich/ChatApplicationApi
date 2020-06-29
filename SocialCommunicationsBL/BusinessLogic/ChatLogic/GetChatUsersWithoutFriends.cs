@@ -3,9 +3,21 @@
     using SocialCommunicationDA.SqlServerLogic.ChatLogic;
     using SocialCommunicationModels.ChatInputAndOutputModels;
 
-    public class GetChatUsersWithoutFriends
+    /// <summary>
+    /// Get Chat Users Without Frineds of Particular User.
+    /// </summary>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+    /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+    internal class GetChatUsersWithoutFriends
     {
-        public OutputModel ChatUsersWithoutFriendsGet(InputModel inputModel)
+        /// <summary>
+        /// Chat User Without Friends of Particular User.
+        /// </summary>
+        /// <param name="inputModel" cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+        /// <returns cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common Output Model.</returns>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        /// <seealso cref="SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        internal OutputModel ChatUsersWithoutFriendsGet(InputModel inputModel)
         {
             OutputModel outputModel;
 
