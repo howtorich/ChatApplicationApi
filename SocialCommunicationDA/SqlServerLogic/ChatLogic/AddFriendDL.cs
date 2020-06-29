@@ -2,7 +2,6 @@
 {
     using CommonLibary.CommonDb;
     using CommonLibary.CommonModels;
-    using Newtonsoft.Json;
     using SocialCommunicationModels.ChatInputAndOutputModels;
     using System.Data;
     using System.Data.SqlClient;

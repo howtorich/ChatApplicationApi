@@ -39,12 +39,15 @@
                 outputModel = new OutputModel();
                 outputModel.Friends = new List<ChatRegisterUserModel>();
 
+                reader.AddCol("UserName");
+                reader.AddCol("UserId");
+
                 while (reader.Read())
                 {
                     ChatUser = new ChatRegisterUserModel()
                     {
-                        UserName = reader.GetDbStriing("UserName"),
-                        UserId = reader.GetDbInt32("UserId"),
+                        UserName = reader.GetDbValue("UserName",string.Empty),
+                        UserId = reader.GetDbValue("UserId", -1),
                     };
                     outputModel.Friends.Add(ChatUser);
                 }
@@ -56,9 +59,11 @@
                 command.GetCommonOutputParams(outputModel.responseModel);
             }
 
-            command.Connection.Close();
+            command.ConnectionDispose();
 
             return outputModel;
         }
     }
+
+    
 }

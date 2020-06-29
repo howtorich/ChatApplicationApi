@@ -37,6 +37,10 @@
             {
                 outputModel = new OutputModel();
                 outputModel.Friends = new List<ChatRegisterUserModel>();
+
+                reader.AddCol("UserId");
+                reader.AddCol("UserName");
+
                 while (reader.Read())
                 {
                     Frined = new ChatRegisterUserModel();
@@ -54,7 +58,7 @@
                 commad.GetCommonOutputParams(outputModel.responseModel);
             }
 
-            commad.Connection.Close();
+            commad.ConnectionDispose();
 
             return outputModel;
 
