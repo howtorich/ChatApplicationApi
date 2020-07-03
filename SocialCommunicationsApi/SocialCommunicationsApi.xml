@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocialCommunicationsApi</name>
+    </assembly>
+    <members>
+        <member name="T:SocialCommunicationsApi.Controllers.SocialCommunicationsController">
+            <summary>
+            Chat Application Api Controller, This is an only one end point for this (Chat Application Api) --> Action Differed on Api Action Enums, Application Controller Name "SocialCommunication".
+            Has an Api Auth Key Validation.
+            </summary>
+        </member>
+        <member name="M:SocialCommunicationsApi.Controllers.SocialCommunicationsController.ChatUserRegistration_Main(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            This is the end Point of the "SocialCommunication" Controller.
+            </summary>
+            <param name="InputModel">Chat Common Input Model.</param>
+            <returns>Chat Common Output Model.</returns>
+            <permission cref="T:SocialCommunicationsApi.Validation.ApiKeyAuth">Auth Key Validation Required.</permission>
+            <remarks>Input Cannot be null and any Exception can return the Common output Model with Error, StackTrace, InnerException details.</remarks>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
+            <seealso cref="T:CommonLibary.CommonModels.ResponseModel"/>
+        </member>
+        <member name="M:SocialCommunicationsApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             This method gets called by the runtime. Use this method to add services to the container.
+            For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940.
+            </summary>
+            <param name="services">services.</param>
+        </member>
+        <member name="M:SocialCommunicationsApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Add Controllers.
+            </summary>
+            <param name="app"> Applications.</param>
+            <param name="env"> Enviroments.</param>
+        </member>
+        <member name="T:SocialCommunicationsApi.Validation.ApiKeyAuth">
+            <summary>
+            Api Key Auth Validation Middleware.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
+        </member>
+        <member name="M:SocialCommunicationsApi.Validation.ApiKeyAuth.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)">
+            <summary>
+            On Action Excution to Api Request. Validate the Headers ApiKeyHeader.
+            </summary>
+            <param name="context" cref="T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext">Action Excution Context.</param>
+            <param name="next" cref="T:Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate">Action Excution Delegte.</param>
+            <returns cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel">Chat Common Output Model.</returns>
+        </member>
+    </members>
+</doc>

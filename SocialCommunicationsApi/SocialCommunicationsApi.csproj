@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\V4Tasks\ChatCallsVideos_Api_GitHub\SocialCommunicationsApi\SocialCommunicationsApi.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.5" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
@@ -12,6 +16,12 @@
   <ItemGroup>
     <ProjectReference Include="..\SocialCommunicationModels\SocialCommunicationModels.csproj" />
     <ProjectReference Include="..\SocialCommunicationsBL\SocialCommunicationsBL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CommonLibary">
+      <HintPath>RefDlls\CommonLibary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 

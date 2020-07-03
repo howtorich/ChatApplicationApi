@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocialCommunicationModels</name>
+    </assembly>
+    <members>
+        <member name="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel">
+            <summary>
+            Chat Commmon Input Model.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.ApiAction">
+            <summary>
+            Api Action Type --> Based on this API End point Action May Differ.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">
+            <summary>
+            Char Register User Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend">
+            <summary>
+            Add friend to User Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend"/>
+        </member>
+        <member name="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel">
+            <summary>
+            Chat Common Output Model.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput">
+            <summary>
+            Chat Register user Output Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">
+            <summary>
+            Chat Register users List Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends">
+            <summary>
+            Chat User Friends Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.userApplicationDetailsModel">
+            <summary>
+            Chat User Application Details Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel">
+            <summary>
+            Chat Response Model.
+            </summary>
+            <seealso cref="T:CommonLibary.CommonModels.ResponseModel"/>
+        </member>
+        <member name="T:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend">
+            <summary>
+            Add Friend to User Model.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend.UserId">
+            <summary>
+            To Whom the Friend should Add as userId.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend.AddingFriendUserId">
+            <summary>
+            Friend User Id to Add.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend.AddingUserIds">
+            <summary>
+            Already Exists Users Frineds Data (PROPERTIE HAS AN INTERNAL USE).
+            </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel">
+            <summary>
+            User Application Model.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel.UserName">
+            <summary>
+            User Name.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel.Online">
+            <summary>
+            User Online --> False(Ofline) --> True(Online).
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel.RecentChatUsers">
+            <summary>
+            User Recent Chat List.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        </member>
+        <member name="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel">
+            <summary>
+            Chat Register User Model.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel.UserName">
+            <summary>
+            Chat User Name.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel.UserId">
+            <summary>
+            Chat User Id.
+            </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.CommonModels.ChatApiActionEnums">
+            <summary>
+            Api End Point Action Type Enums.
+            </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions">
+            <summary>
+            Api Action Enum Based on this Enum Api End Point Action May Differ.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.Registration">
+            <summary>
+            Chat User Registration Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetGolbalChatUsersList">
+            <summary>
+            Get Global Chat Users List Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetUserFriendsList">
+            <summary>
+            Get User Friends List Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetUsersWithoutFriends">
+            <summary>
+            Get Chat Users Without Friends of Particular User Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.AddFriend">
+            <summary>
+            Add Friend to user Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetUserApplicationDetails">
+            <summary>
+            Get user Application Details Api Action Type.
+            </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.CommonModels.ExecutionStatusEnums">
+            <summary>
+            Excution Status Enums Class.
+            </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus">
+            <summary>
+            Chat Excution Status Enum.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.NoContent">
+            <summary>
+            No Content type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ExecutionError">
+            <summary>
+            Api Excution Error.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.Success">
+            <summary>
+            Success Status.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.Failed">
+            <summary>
+            Failed Sttus.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ValidationSuccess">
+            <summary>
+            Validation Success.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ValidationFailed">
+            <summary>
+            Validation Failed.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.NoSuchAction">
+            <summary>
+            No Such Api Action Type Status.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ActionTypeRequired">
+            <summary>
+            Api Action type Required.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UnAuthorized">
+            <summary>
+            Un Authorized Access Denied Status Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UserDoesnotExist">
+            <summary>
+            User Does not Exist.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpaces">
+            <summary>
+            User Name Does Not Allowed Spaces status Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UserNameDoesnotAllowSpecialSymbols">
+            <summary>
+            User Name Does Not Allow Special Symbols status Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ProvideUserId">
+            <summary>
+            Provide user Id Status Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ProvideFriendUserId">
+            <summary>
+            Provide Friend id Status Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.UserCannotAddThemSelves">
+            <summary>
+            User Cannot Add Themselves Status Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.AddingExistsUser">
+            <summary>
+            Adding Exists User Sttus Type.
+            </summary>
+        </member>
+        <member name="P:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionalStatus">
+            <summary>
+            Api Functional Excution Status
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus"/>
+        </member>
+        <member name="P:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionalStatusMessage">
+            <summary>
+            Excutional Status Message. Based on Excutional Status.
+            </summary>
+            <seealso cref="P:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionalStatus"/>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ErrorMessage">
+            <summary>
+            Api Error Message.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.InnerException">
+            <summary>
+            Api Inner Execption.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.StackTrace">
+            <summary>
+            Api Exception StackTrace.
+            </summary>
+        </member>
+    </members>
+</doc>

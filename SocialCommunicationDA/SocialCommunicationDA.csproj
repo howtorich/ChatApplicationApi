@@ -1,15 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>D:\V4Tasks\ChatCallsVideos_Api_GitHub\SocialCommunicationsBL\SocialCommunicationsBL.xml</DocumentationFile>
+    <DocumentationFile>D:\V4Tasks\ChatCallsVideos_Api_GitHub\SocialCommunicationDA\SocialCommunicationDA.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SocialCommunicationDA\SocialCommunicationDA.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SocialCommunicationModels\SocialCommunicationModels.csproj" />
   </ItemGroup>
 

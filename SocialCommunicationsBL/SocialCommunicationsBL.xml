@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocialCommunicationsBL</name>
+    </assembly>
+    <members>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatActionFlowBl">
+            <summary>
+            Can Handle the Action Flow from the request input model ApiAction.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.ApiAction"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatActionFlowBl.ChatApiActionFlow(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Handle the Action Based on the input Model Api Action type.
+            Conrtoll Flow can divert based on respective Api Action.
+            </summary>
+            <param name="inputModel">Chat Common Input Model.</param>
+            <returns>Chat Common Ouput Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.ApiAction"/>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
+        </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.AddFriend">
+            <summary>
+            Add friend to Chat user.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
+            <seealso cref="P:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionalStatusMessage"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.AddFriend.FriendAdding(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Adding friend to User.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.addFriend">Chat Common Input Model.</param>
+            <returns cref="T:SocialCommunicationModels.CommonModels.ExecutionStatusEnums">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
+        </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.ChatUserRegistration">
+            <summary>
+            Chat User Registration Class.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.ChatUserRegistration.UserRegistration(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Chat User Registration Action BLL Member. User Registration to Chat.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model --> With Respective child Model of "ChatRegisterUserModel".</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput">Chat Common Output Model.</returns>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
+            <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
+            <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
+        </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatRegisteredUserFriends">
+            <summary>
+            Get Char Registered User Friends List.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatRegisteredUserFriends.ChatRegisteredUserFriends(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Chat Registratered User Friends List Get.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.Friends"/>
+            <remarks>End Point Sample Json: </remarks>
+        </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatRegisteredUsers">
+            <summary>
+            Get Chat Registered Users List (Global Chat users list).
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatRegisteredUsers.ChatRegisteredUsersGet(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get Chat Registered User List Golbal Chat Users List.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatUsersWithoutFriends">
+            <summary>
+            Get Chat Users Without Frineds of Particular User.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatUsersWithoutFriends.ChatUsersWithoutFriendsGet(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Chat User Without Friends of Particular User.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common Input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+    </members>
+</doc>
