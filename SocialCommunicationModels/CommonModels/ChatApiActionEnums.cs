@@ -39,6 +39,11 @@
             /// Get user Application Details Api Action Type.
             /// </summary>
             GetUserApplicationDetails = 105,
+
+            /// <summary>
+            /// Get Chat Conversation Info Action Type.
+            /// </summary>
+            GetChatConverstionInfo = 106,
         }
     }
 }

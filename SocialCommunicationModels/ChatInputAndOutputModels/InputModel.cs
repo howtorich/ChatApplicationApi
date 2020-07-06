@@ -1,6 +1,7 @@
 ﻿namespace SocialCommunicationModels.ChatInputAndOutputModels
 {
     using SocialCommunicationModels.ChatModels.ChatFriendAddingModels;
+    using SocialCommunicationModels.ChatModels.ConversationModels;
     using SocialCommunicationModels.ChatRegisterModels;
     using SocialCommunicationModels.CommonModels;
 
@@ -28,5 +29,11 @@
         /// </summary>
         /// <seealso cref="AddFriend"/>
         public AddFriend addFriend;
+
+        /// <summary>
+        /// Chat Conversation Model.
+        /// </summary>
+        /// <seealso cref="ChatConversationModel"/>
+        public ChatConversationModel chatConversationModel;
     }
 }

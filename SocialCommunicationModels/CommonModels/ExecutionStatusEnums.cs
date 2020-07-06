@@ -94,6 +94,12 @@
             /// </summary>
             AddingExistsUser = 124,
 
+
+            /// <summary>
+            /// Conversation Does not exist status type.
+            /// </summary>
+            ConversationDoesnotExist = 141
+
         }
 
         /// <summary>
@@ -185,6 +191,11 @@
                     break;
                 case ExecutionStatus.AddingExistsUser:
                     ExecutionalMessage = "Already User Exists.";
+                    break;
+
+                // Conversation Execution Status.
+                case ExecutionStatus.ConversationDoesnotExist:
+                    ExecutionalMessage = "No Such Type of Conversation.";
                     break;
                 default:
                     ExecutionalMessage = "--- Somting went worng! ---";

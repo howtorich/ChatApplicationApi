@@ -54,6 +54,22 @@
             <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
             <seealso cref="T:SocialCommunicationModels.ChatRegisterModels.ChatRegisterUserModel"/>
         </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatConversationInfo">
+            <summary>
+            Get Conversation Info BLL Class.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatConversationModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.chatConversationModel"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatConversationInfo.GetChatConversationDetails(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get Conversation Details Method.
+            </summary>
+            <param name="inputModel">Chat Common Input Model.</param>
+            <returns>Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatConversationModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.chatConversationModel"/>
+        </member>
         <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatRegisteredUserFriends">
             <summary>
             Get Char Registered User Friends List.
@@ -86,6 +102,21 @@
             <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common output Model.</returns>
             <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
             <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatUserApplicationDetails">
+            <summary>
+            Get Chat user Application Details Class.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.userApplicationDetailsModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        </member>
+        <member name="M:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatUserApplicationDetails.GetChatUserAppDetails(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get Chat user Application Details Method.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.userApplicationDetailsModel">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
         </member>
         <member name="T:SocialCommunicationsBL.BusinessLogic.ChatLogic.GetChatUsersWithoutFriends">
             <summary>

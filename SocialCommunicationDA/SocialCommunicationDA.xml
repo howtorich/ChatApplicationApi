@@ -35,6 +35,22 @@
             <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
             <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisterUserOutput"/>
         </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatConversationInfoDL">
+            <summary>
+            Get Conversation Info DLL Class.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatConversationModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.chatConversationModel"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatConversationInfoDL.GetChatConversationInfo(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get Conversation Details Method.
+            </summary>
+            <param name="inputModel">Chat Common Input Model.</param>
+            <returns>Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatConversationModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.chatConversationModel"/>
+        </member>
         <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatRegisteredUserFriendsDL">
             <summary>
             Get Char Registered User Friends List DLL.
@@ -67,6 +83,21 @@
             <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers">Chat Common output Model.</returns>
             <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
             <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.ChatRegisteredUsers"/>
+        </member>
+        <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatUserApplicationDetailsDL">
+            <summary>
+            Get Chat user Application Details DLL.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.userApplicationDetailsModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel"/>
+        </member>
+        <member name="M:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatUserApplicationDetailsDL.GetChatUserApplicationDetails(SocialCommunicationModels.ChatInputAndOutputModels.InputModel)">
+            <summary>
+            Get Chat user Application Details DLL Method.
+            </summary>
+            <param name="inputModel" cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatRegisterUserModel">Chat Common input Model.</param>
+            <returns cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.userApplicationDetailsModel">Chat Common Output Model.</returns>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel"/>
         </member>
         <member name="T:SocialCommunicationDA.SqlServerLogic.ChatLogic.GetChatUsersWithoutFriendsDL">
             <summary>

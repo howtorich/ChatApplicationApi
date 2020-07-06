@@ -27,6 +27,12 @@
             </summary>
             <seealso cref="T:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend"/>
         </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatConversationModel">
+            <summary>
+            Chat Conversation Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel"/>
+        </member>
         <member name="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel">
             <summary>
             Chat Common Output Model.
@@ -56,6 +62,12 @@
             </summary>
             <seealso cref="T:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel"/>
         </member>
+        <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.chatConversationModel">
+            <summary>
+            chat Conversation Output Model.
+            </summary>
+            <seealso cref="T:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel"/>
+        </member>
         <member name="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.responseModel">
             <summary>
             Chat Response Model.
@@ -80,6 +92,48 @@
         <member name="F:SocialCommunicationModels.ChatModels.ChatFriendAddingModels.AddFriend.AddingUserIds">
             <summary>
             Already Exists Users Frineds Data (PROPERTIE HAS AN INTERNAL USE).
+            </summary>
+        </member>
+        <member name="T:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel">
+            <summary>
+            Chat Conversation Model.
+            </summary>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.InputModel.chatConversationModel"/>
+            <seealso cref="F:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel.chatConversationModel"/>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.Chat_bwt">
+            <summary>
+            chat Betweent users --> string formation type FromUser_ToUser.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.ConversationId">
+            <summary>
+            Conversation id(Unique).
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.ChatRequestByUserId">
+            <summary>
+            Chat Conversation Request User Id.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.ConversationMesgCount">
+            <summary>
+            Conversation Message Total Count.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.UnreadMesgCount">
+            <summary>
+            Conversation Total Unread Message Count.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.ConversationType">
+            <summary>
+            Conversation Type --> Group Conversation, One to One Conversation.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.ChatModels.ConversationModels.ChatConversationModel.IsActive">
+            <summary>
+            Conversation is Active or not Defined by bool type.
             </summary>
         </member>
         <member name="T:SocialCommunicationModels.ChatModels.UserApplicationDetailsModels.UserApplicationDetailsModel">
@@ -156,6 +210,11 @@
         <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetUserApplicationDetails">
             <summary>
             Get user Application Details Api Action Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ChatApiActionEnums.ChatApiActions.GetChatConverstionInfo">
+            <summary>
+            Get Chat Conversation Info Action Type.
             </summary>
         </member>
         <member name="T:SocialCommunicationModels.CommonModels.ExecutionStatusEnums">
@@ -246,6 +305,11 @@
         <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.AddingExistsUser">
             <summary>
             Adding Exists User Sttus Type.
+            </summary>
+        </member>
+        <member name="F:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionStatus.ConversationDoesnotExist">
+            <summary>
+            Conversation Does not exist status type.
             </summary>
         </member>
         <member name="P:SocialCommunicationModels.CommonModels.ExecutionStatusEnums.ExecutionalStatus">

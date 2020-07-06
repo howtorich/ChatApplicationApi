@@ -91,6 +91,16 @@
 
                     break;
 
+                case ChatApiActionEnums.ChatApiActions.GetChatConverstionInfo:
+                    // Test Input Json  : {"ApiAction":106,"chatConversationModel":{"Chat_bwt":"1_2"}}
+                    // Test Output Json : {"chatConversationModel":{"chat_bwt":"1_2","conversationId":1,"chatRequestByUserId":0,"conversationMesgCount":0,"unreadMesgCount":0,"conversationType":0,"isActive":false},"responseModel":{"executionStatus":1,"errorStatus":0,"errorMessage":""},"errorMessage":null,"innerException":null,"stackTrace":null,"executionalStatus":1003,"executionalStatusMessage":"Success"}
+
+                    var getChatConversationInfo = new GetChatConversationInfo();
+
+                    outputModel = getChatConversationInfo.GetChatConversationDetails(inputModel);
+
+                    break;
+
                 default:
                     outputModel = new OutputModel()
                     {

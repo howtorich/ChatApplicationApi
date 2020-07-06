@@ -2,6 +2,7 @@
 {
     using CommonLibary.CommonModels;
     using Newtonsoft.Json;
+    using SocialCommunicationModels.ChatModels.ConversationModels;
     using SocialCommunicationModels.ChatModels.UserApplicationDetailsModels;
     using SocialCommunicationModels.ChatRegisterModels;
     using SocialCommunicationModels.CommonModels;
@@ -39,6 +40,13 @@
         /// <seealso cref="UserApplicationDetailsModel"/>
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public UserApplicationDetailsModel userApplicationDetailsModel;
+
+        /// <summary>
+        /// chat Conversation Output Model.
+        /// </summary>
+        /// <seealso cref="ChatConversationModel"/>
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public ChatConversationModel chatConversationModel;
 
         /// <summary>
         /// Chat Response Model.
