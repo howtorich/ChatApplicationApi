@@ -21,7 +21,6 @@
             <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.InputModel"/>
             <seealso cref="T:SocialCommunicationModels.ChatInputAndOutputModels.OutputModel"/>
             <seealso cref="T:CommonLibary.CommonModels.ResponseModel"/>
-            <seealso href="ChatApiTechDocument/CommonLibary.dll">Download Common Library DLL</seealso>
         </member>
         <member name="M:SocialCommunicationsApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
